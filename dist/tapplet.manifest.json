@@ -20,7 +20,7 @@
     "location": {
       "npm": {
         "packageName": "faucet-tapplet",
-        "registry": "https://registry.npmjs.org/"
+        "registry": "https://registry.npmjs.org/faucet-tapplet"
       }
     }
   },

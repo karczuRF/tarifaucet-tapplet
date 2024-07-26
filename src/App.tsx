@@ -33,7 +33,8 @@ function App() {
   }, [])
 
   const deployFaucet = async () => {
-    if (!firstToken || !secondToken) throw new Error("Tokens not initialized")
+    // TODO fix this check
+    // if (!firstToken || !secondToken) throw new Error("Tokens not initialized")
 
     const result = await initFaucets(provider.current)
     console.log(result)
@@ -82,9 +83,11 @@ function App() {
     <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" width="100%">
       <Paper variant="outlined" elevation={0} sx={{ padding: 3, borderRadius: 4, marginBottom: 3, width: "20%" }}>
         <Stack direction="column" spacing={2}>
-          {/* <Button variant="contained" sx={{ width: "100%" }} onClick={deployFaucet}>
-            Deploy Faucet
-          </Button> */}
+          {
+            <Button variant="contained" sx={{ width: "100%" }} onClick={deployFaucet}>
+              Deploy Faucet xD
+            </Button>
+          }
           <Button variant="contained" sx={{ width: "100%" }} onClick={takeCoins}>
             Take free coins
           </Button>

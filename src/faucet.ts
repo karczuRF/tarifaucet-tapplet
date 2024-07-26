@@ -4,14 +4,14 @@ import { InitTokensResponse, Token } from "./types.ts"
 
 export const FEE_AMOUNT = "2000"
 export const INIT_SUPPLY = "100000"
-export const FAUCET_TEMPLATE_ADDRESS = "c465c2858441d5a46b9d14b924455eb846ed3dd4bea303ad0866db64b3b3b152"
+export const FAUCET_TEMPLATE_ADDRESS = "d2b005c94e5120d3680819a6caf475ab72e18a6e94289486294ff509c87d4a42"
 
-export const FIRST_TOKEN_RESOURCE_ADDRESS = "resource_e90768b30d3e97d6e80a794bcb141ca786e5501af32e0ad106ef47c1"
-export const FIRST_TOKEN_COMPONENT_ADDRESS = "component_e90768b30d3e97d6e80a794bcb141ca786e5501ac6353f6797bc3029"
+export const FIRST_TOKEN_RESOURCE_ADDRESS = "resource_09b342a52c78ed3288904fbef506b4e8cc9af8f316d1cc9c7ca46666"
+export const FIRST_TOKEN_COMPONENT_ADDRESS = "component_09b342a52c78ed3288904fbef506b4e8cc9af8f3236440632dfb525d"
 export const FIRST_TOKEN_SYMBOL = "A"
 
-export const SECOND_TOKEN_RESOURCE_ADDRESS = "resource_70229469c18f7f70193582d0f28033b7a044171c9ead5d487abe7c32"
-export const SECOND_TOKEN_COMPONENT_ADDRESS = "component_70229469c18f7f70193582d0f28033b7a044171cc6353f6797bc3029"
+export const SECOND_TOKEN_RESOURCE_ADDRESS = "resource_75535dbe661cfef60eebb5da90cf5051ea439341d252eea0fe592ebd"
+export const SECOND_TOKEN_COMPONENT_ADDRESS = "component_75535dbe661cfef60eebb5da90cf5051ea439341236440632dfb525d"
 export const SECOND_TOKEN_SYMBOL = "B"
 
 export const defaultFirstToken: Token = {
@@ -33,8 +33,10 @@ export const defaultSecondToken: Token = {
 }
 
 export async function takeFreeCoins(provider: TariProvider, faucet_component: string) {
+  console.log("take-free-coins")
   try {
     const account = await provider.getAccount()
+    console.log(account.address)
     const instructions = [
       {
         CallMethod: {
