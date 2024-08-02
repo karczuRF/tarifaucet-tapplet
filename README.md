@@ -1,3 +1,3 @@
-# Tapplet example
+# Tari Facuet Tapplet
 
-Tapplet with a provider for testing purposes for Tari Universe
+The Faucet Tapplet with a Tari Provider for testing purposes.

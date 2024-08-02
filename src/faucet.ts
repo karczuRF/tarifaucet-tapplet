@@ -48,7 +48,6 @@ export async function takeFreeCoins(provider: TariProvider, faucet_component: st
     const accountComponent = new AccountTemplate(account.address)
     const fee = new Amount(2000)
     const maxfee = fee.getStringValue()
-    console.log(account.address)
 
     const required_substates = [{ substate_id: account.address }, { substate_id: faucet_component }]
 
@@ -84,16 +83,8 @@ export async function initFaucets(provider: TariProvider): Promise<InitTokensRes
     const { response, result: txResult } = await submitAndWaitForTransaction(provider, req)
     if (!response) throw new Error("Failed to init tokens")
 
-    // const transactionResult = txResult?.result?.result
-    // if (!transactionResult || !("Accept" in transactionResult)) throw new Error("No 'Accept' result found")
-
-    // const upSubstates: any[] = transactionResult.Accept.up_substates
-
-    // TODO
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const upSubstates = getAcceptResultSubstates(txResult)?.upSubstates as any[]
-    console.log("upSubstates")
-    console.log(upSubstates)
     if (!upSubstates) throw new Error("No up substates found")
 
     const firstToken: Token = {

@@ -1,6 +1,6 @@
 {
-  "name": "faucet-tapplet",
-  "version": "0.0.1",
+  "name": "tarifaucet-tapplet",
+  "version": "1.0.0",
   "type": "module",
   "description": "Faucet tapplet",
   "main": "dist/index.html",
@@ -8,7 +8,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MCozhusheck/faucet-tapplet.git"
+    "url": "git+https://github.com/karczuRF/tarifaucet-tapplet.git"
   },
   "scripts": {
     "dev": "vite",
