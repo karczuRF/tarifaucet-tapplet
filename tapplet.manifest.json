@@ -1,17 +1,23 @@
 {
-  "packageName": "faucet-tapplet",
-  "version": "0.0.1",
-  "displayName": "Faucet tapplet",
+  "packageName": "tarifaucet-tapplet",
+  "version": "1.0.0",
+  "displayName": "Tari Faucet",
   "status": "TEST",
   "category": "TEST",
   "author": {
-    "name": "MCozhusheck",
-    "website": "https://api.github.com/users/MCozhusheck/repos"
+    "name": "karczuRF",
+    "website": "https://api.github.com/users/karczuRF/repos"
   },
   "about": {
-    "summary": "Faucet testing",
-    "description": "This is the simplest example of a faucet tapplet for testing purposes."
+    "summary": "Fee Faucet",
+    "description": "Get free coins from the Tari Faucet"
   },
+  "audits": [
+    {
+      "auditor": "",
+      "reportUrl": ""
+    }
+  ],
   "design": {
     "logoPath": "src/images/logo.svg",
     "backgroundPath": "src/images/background.svg"
@@ -20,16 +26,16 @@
     "type": "git",
     "url": "",
     "codeowners": [
-      "@MCozhusheck"
+      "@karczuRF"
     ]
   },
   "source": {
     "location": {
       "npm": {
-        "packageName": "faucet-tapplet",
-        "registry": "https://registry.npmjs.org/faucet-tapplet",
-        "distTarball": "https://registry.npmjs.org/faucet-tapplet/-/faucet-tapplet-0.0.1.tgz",
-        "integrity": "sha512-lVMTjcpCz0ENSkqn0dbbmJ6E2PbUoIpvjDjj0tVA7zN4QjWCBZIcok55NuCiJQaAg5BqJzPqsvhhEEP8TIQ0Fw=="
+        "packageName": "tarifaucet-tapplet",
+        "registry": "https://registry.npmjs.org/",
+        "distTarball": "https://registry.npmjs.org/tarifaucet-tapplet/-/tarifaucet-tapplet-1.0.0.tgz",
+        "integrity": "sha512-GRcBMW5XBue43XDGdRj0Tm3F6qcR7QSkk9VZrmtTYtZUoaCgAGcd3TY7knP2ET+lMp5B6HVG5nVLP8nyNfRYaA=="
       }
     }
   },
@@ -38,5 +44,15 @@
     "STAGENET",
     "NEXTNET"
   ],
-  "manifestVersion": "0.1.0"
+  "permissions": [
+    "TariPermissionAccountBalance",
+    "TariPermissionAccountInfo",
+    "TariPermissionAccountList",
+    "TariPermissionTransactionGet",
+    "TariPermissionTransactionSend",
+    "TariPermissionTransactionsGet",
+    "TariPermissionSubstatesRead",
+    "TariPermissionTemplatesRead"
+  ],
+  "manifestVersion": "1.0.0"
 }
