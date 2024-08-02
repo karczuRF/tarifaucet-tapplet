@@ -34,6 +34,7 @@ export async function submitAndWaitForTransaction(
     max_epoch: null,
   }
 
+  console.log("before req:", req)
   const resp = await provider.submitTransaction(req)
 
   const result = await waitForTransactionResult(provider, resp.transaction_id)

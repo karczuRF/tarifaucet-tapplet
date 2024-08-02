@@ -85,7 +85,7 @@ function App() {
         <Stack direction="column" spacing={2}>
           {
             <Button variant="contained" sx={{ width: "100%" }} onClick={deployFaucet}>
-              Deploy Faucet xD
+              Deploy Faucet
             </Button>
           }
           <Button variant="contained" sx={{ width: "100%" }} onClick={takeCoins}>

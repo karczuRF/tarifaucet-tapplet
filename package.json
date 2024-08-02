@@ -19,7 +19,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tariproject/tarijs": "https://gitpkg.now.sh/tari-project/tari.js?main&scripts.postinstall=npm%20run%20build-tsc",
+    "@tariproject/tarijs": "../../forked/tari.js",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
